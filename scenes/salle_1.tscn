@@ -62,9 +62,10 @@ texture = ExtResource("5_e8tdr")
 script = ExtResource("7_qd6qk")
 
 [node name="TombeauFermé" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(720, 492)
 scale = Vector2(1.14286, 1.28858)
 texture = ExtResource("6_e4oa0")
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="tombeauClose" from="TombeauOuvert" to="." method="_on_tombeau_ouvert_tombeau_close"]

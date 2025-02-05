@@ -14,6 +14,7 @@
 script = ExtResource("1_8glny")
 node = NodePath("Game")
 levels = Array[PackedScene]([ExtResource("2_rwcrh"), ExtResource("3_jarpu"), ExtResource("4_kcmko"), ExtResource("5_0q2vl")])
+menu_scene = ExtResource("8_475ui")
 
 [node name="Game" parent="." instance=ExtResource("1_uymy7")]
 script = ExtResource("2_2c2wt")
