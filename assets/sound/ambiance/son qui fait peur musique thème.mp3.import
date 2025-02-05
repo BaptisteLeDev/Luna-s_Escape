@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckovtladv1ic5"
+path="res://.godot/imported/son qui fait peur musique thème.mp3-6ff82bb315a1999ba54fd9fd2f4a5c59.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/ambiance/son qui fait peur musique thème.mp3"
+dest_files=["res://.godot/imported/son qui fait peur musique thème.mp3-6ff82bb315a1999ba54fd9fd2f4a5c59.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

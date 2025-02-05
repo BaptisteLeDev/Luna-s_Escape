@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2kgs70c21iyl"
+path="res://.godot/imported/potion sall des potions.mp3-dda860f96552fce41163c8c5ad8cd70a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/sfx/potion sall des potions.mp3"
+dest_files=["res://.godot/imported/potion sall des potions.mp3-dda860f96552fce41163c8c5ad8cd70a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

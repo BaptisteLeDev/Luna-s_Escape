@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://p5yfhn8hudbv"
+path="res://.godot/imported/pierre qui glisse pourr porte.mp3-8e2cb5d2eed481810cf627a27b067c07.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/sfx/pierre qui glisse pourr porte.mp3"
+dest_files=["res://.godot/imported/pierre qui glisse pourr porte.mp3-8e2cb5d2eed481810cf627a27b067c07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

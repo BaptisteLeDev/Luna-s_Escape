@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hs5iudhylg2r"
+path="res://.godot/imported/momie .mp3-abce63a1fed948cb22149e57229e5f72.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/sfx/momie .mp3"
+dest_files=["res://.godot/imported/momie .mp3-abce63a1fed948cb22149e57229e5f72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

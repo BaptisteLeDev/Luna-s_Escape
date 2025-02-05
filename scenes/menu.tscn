@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7w1p4h4y6567"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_xv3na"]
+[ext_resource type="AudioStream" uid="uid://7t83er30su3a" path="res://assets/sound/ost/music egyptienne.mp3" id="2_rfaue"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rlkbj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0yby"]
+font_size = 64
+outline_size = 5
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xv3na")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_rlkbj")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 157.0
+offset_right = 59.0
+offset_bottom = 180.0
+grow_horizontal = 2
+text = "MENU PRINCIPAL"
+label_settings = SubResource("LabelSettings_i0yby")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.423698
+anchor_top = 0.639815
+anchor_right = 0.576823
+anchor_bottom = 0.682407
+offset_left = -51.5
+offset_top = -55.0
+offset_right = 51.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="Start_Btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sortir_Btn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "QUIT
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rfaue")
+autoplay = true
+bus = &"Ost"
+parameters/looping = false
+
+[connection signal="button_down" from="VBoxContainer/Start_Btn" to="." method="_on_start_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/Sortir_Btn" to="." method="_on_sortir_btn_button_down"]
