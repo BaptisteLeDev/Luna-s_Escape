@@ -1,6 +1,5 @@
 extends Control
 
-@export var salle : PackedScene
 @export var node : Node
 
 signal startGame

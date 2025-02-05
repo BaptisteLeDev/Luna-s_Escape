@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://dv3b5bnskucjb"]
+[gd_scene load_steps=4 format=3 uid="uid://dv3b5bnskucjb"]
+
+[ext_resource type="Script" path="res://ui/ui.gd" id="1_8hwn1"]
+[ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="2_863ec"]
+[ext_resource type="AudioStream" uid="uid://p5yfhn8hudbv" path="res://assets/sound/sfx/pierre qui glisse pourr porte.mp3" id="3_ahkvs"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -7,3 +11,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8hwn1")
+
+[node name="Next_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.997222
+anchor_right = 0.5
+anchor_bottom = 1.99722
+offset_left = -184.0
+offset_right = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(0.456065, 0.456065)
+action_mode = 0
+icon = ExtResource("2_863ec")
+flat = true
+autowrap_mode = 3
+clip_text = true
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ahkvs")
+volume_db = -5.0
+max_polyphony = 10
+
+[connection signal="button_down" from="Next_btn" to="." method="_on_next_btn_button_down"]

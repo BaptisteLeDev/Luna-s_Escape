@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmxni7s4bb0ap"]
 
-[ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="1_165fq"]
-[ext_resource type="Texture2D" uid="uid://ixhmigr0okm4" path="res://assets/test.jpg" id="3_tqmms"]
+[ext_resource type="Texture2D" uid="uid://bfhqo8hqwihsa" path="res://assets/test2.jpg" id="1_a25gl"]
+[ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
 
 [node name="Salle_Sortie" type="Node2D"]
 
@@ -9,28 +9,12 @@
 position = Vector2(960, 540)
 position_smoothing_enabled = true
 
-[node name="Button_Up" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 872.0
-offset_top = 152.0
-offset_right = 1240.0
-offset_bottom = 520.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -1.5708
-scale = Vector2(0.456065, 0.456065)
-icon = ExtResource("1_165fq")
-flat = true
-icon_alignment = 1
+[node name="Sprite_Mur" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("1_a25gl")
 
-[node name="Sprite_Mur" type="Sprite2D" parent="Button_Up"]
-position = Vector2(-850.757, 192.952)
-rotation = 1.5708
-scale = Vector2(2.19267, 2.19267)
-texture = ExtResource("3_tqmms")
-
-[connection signal="pressed" from="Button_Up" to="Button_Up" method="_on_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8ln0m")
+volume_db = -15.0
+autoplay = true

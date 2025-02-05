@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://g7hmeyw6sabx"]
+[gd_scene load_steps=2 format=3 uid="uid://g7hmeyw6sabx"]
 
-[ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="1_6a350"]
 [ext_resource type="Texture2D" uid="uid://ixhmigr0okm4" path="res://assets/test.jpg" id="3_db6gw"]
 
 [node name="Salle_Eau" type="Node2D"]
@@ -9,28 +8,7 @@
 position = Vector2(960, 540)
 position_smoothing_enabled = true
 
-[node name="Button_Up" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 872.0
-offset_top = 152.0
-offset_right = 1240.0
-offset_bottom = 520.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -1.5708
-scale = Vector2(0.456065, 0.456065)
-icon = ExtResource("1_6a350")
-flat = true
-icon_alignment = 1
-
-[node name="Sprite_Mur" type="Sprite2D" parent="Button_Up"]
-position = Vector2(-850.757, 192.952)
-rotation = 1.5708
-scale = Vector2(2.19267, 2.19267)
+[node name="Sprite_Mur" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
 texture = ExtResource("3_db6gw")
-
-[connection signal="pressed" from="Button_Up" to="Button_Up" method="_on_pressed"]

@@ -1,24 +1,22 @@
 extends CanvasLayer
 
-var duration = 1.0  # Durée de la transition en secondes
-var callback = null  # Fonction à appeler après la transition
+signal on_transition_finished  # Signal émis à la fin de la transition
 
-func fade_in():
-	$ColorRect.modulate.a = 1  # Commence complètement opaque
-	$ColorRectTween.tween_property($ColorRect, "modulate:a", 0, duration)
-	$ColorRectTween.start()
+@onready var color_rect = $ColorRect  # Rectangle pour l'effet de fondu
+@onready var animation_player = $AnimationPlayer  # Animation pour les transitions
 
-func fade_out():
-	$ColorRect.modulate.a = 0  # Commence transparent
-	$ColorRectTween.tween_property($ColorRect, "modulate:a", 1, duration)
-	$ColorRectTween.start()
+func _ready():
+	color_rect.visible = false  # Assure que le rectangle est invisible au départ
 
-func start_transition(func_to_call):
-	callback = func_to_call
-	fade_out()
 
-func _on_ColorRectTween_tween_completed(object, key):
-	# Si la transition est terminée, on exécute la fonction passée en callback
-	if key == "modulate:a" and callback != null:
-		callback()
-		fade_in()
+# Fonction pour lancer la transition
+func transition():
+	color_rect.visible = true  # Rendre le rectangle visible
+	animation_player.play("fade_to_black")  # Jouer l'animation de transition
+
+
+# Fonction appelée lorsque l'animation est terminée
+func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+	if anim_name == "fade_to_black":  # Vérifie si l'animation terminée est celle attendue
+		emit_signal("on_transition_finished")  # Émet le signal pour indiquer que la transition est terminée
+		color_rect.visible = false  # Cache à nouveau le rectangle

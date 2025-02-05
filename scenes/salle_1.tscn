@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6c06lye5mb2p"]
 
-[ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="1_veldb"]
+[ext_resource type="Script" path="res://scenes/salle_1.gd" id="1_dk5on"]
 [ext_resource type="Texture2D" uid="uid://ixhmigr0okm4" path="res://assets/test.jpg" id="3_l0hlw"]
 [ext_resource type="AudioStream" uid="uid://c2m3fj1lhdxl7" path="res://assets/sound/ost/Tomb with the mummy.mp3" id="3_sv1no"]
 
@@ -8,6 +8,7 @@
 size = Vector2(285, 663)
 
 [node name="Salle_Tombeau" type="Node2D"]
+script = ExtResource("1_dk5on")
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
 position = Vector2(960, 540)
@@ -36,23 +37,3 @@ stream = ExtResource("3_sv1no")
 autoplay = true
 bus = &"Ost"
 parameters/looping = true
-
-[node name="Button_Up" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 872.0
-offset_top = 152.0
-offset_right = 1240.0
-offset_bottom = 520.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -1.5708
-scale = Vector2(0.456065, 0.456065)
-icon = ExtResource("1_veldb")
-flat = true
-icon_alignment = 1
-
-[connection signal="pressed" from="Button_Up" to="Button_Up" method="_on_pressed"]

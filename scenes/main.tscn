@@ -17,10 +17,10 @@ levels = Array[PackedScene]([ExtResource("2_rwcrh"), ExtResource("3_jarpu"), Ext
 [node name="Game" parent="." instance=ExtResource("1_uymy7")]
 script = ExtResource("2_2c2wt")
 
-[node name="Ui" parent="Game" instance=ExtResource("5_3xfvs")]
+[node name="Ui" parent="." instance=ExtResource("5_3xfvs")]
 
 [node name="Menu" parent="." node_paths=PackedStringArray("node") instance=ExtResource("8_475ui")]
-salle = ExtResource("2_rwcrh")
 node = NodePath("../Game")
 
+[connection signal="NextLv" from="Ui" to="." method="_on_ui_next_lv"]
 [connection signal="startGame" from="Menu" to="." method="_on_menu_start_game"]
