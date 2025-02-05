@@ -15,13 +15,14 @@ script = ExtResource("1_8hwn1")
 
 [node name="Next_btn" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.997222
 anchor_right = 0.5
-anchor_bottom = 1.99722
+anchor_bottom = 1.0
 offset_left = -184.0
+offset_top = 1026.0
 offset_right = 184.0
+offset_bottom = 1026.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
@@ -32,7 +33,6 @@ flat = true
 autowrap_mode = 3
 clip_text = true
 icon_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ahkvs")

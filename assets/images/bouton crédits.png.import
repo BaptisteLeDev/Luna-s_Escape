@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfhqo8hqwihsa"
-path="res://.godot/imported/test2.jpg-d0ad86f69b069ae48801ddfe48f04c92.ctex"
+uid="uid://d0se5ux7sg6gf"
+path="res://.godot/imported/bouton crédits.png-6987edcdc1f54560c6c2253546b183a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/test2.jpg"
-dest_files=["res://.godot/imported/test2.jpg-d0ad86f69b069ae48801ddfe48f04c92.ctex"]
+source_file="res://assets/images/bouton crédits.png"
+dest_files=["res://.godot/imported/bouton crédits.png-6987edcdc1f54560c6c2253546b183a1.ctex"]
 
 [params]
 

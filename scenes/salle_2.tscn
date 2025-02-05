@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmxni7s4bb0ap"]
 
-[ext_resource type="Texture2D" uid="uid://bfhqo8hqwihsa" path="res://assets/test2.jpg" id="1_a25gl"]
+[ext_resource type="Texture2D" uid="uid://dmmm3nt0jv5ho" path="res://assets/images/scène de fin 2.0.svg" id="1_rrvgx"]
 [ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
 
 [node name="Salle_Sortie" type="Node2D"]
@@ -11,8 +11,8 @@ position_smoothing_enabled = true
 
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
-texture = ExtResource("1_a25gl")
+scale = Vector2(1.37302, 1.37302)
+texture = ExtResource("1_rrvgx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8ln0m")

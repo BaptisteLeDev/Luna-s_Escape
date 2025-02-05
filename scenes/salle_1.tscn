@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://6c06lye5mb2p"]
 
 [ext_resource type="Script" path="res://scenes/salle_1.gd" id="1_dk5on"]
-[ext_resource type="Texture2D" uid="uid://ixhmigr0okm4" path="res://assets/test.jpg" id="3_l0hlw"]
+[ext_resource type="Texture2D" uid="uid://cghpvgeq5py0g" path="res://assets/images/Pièce tombeau.svg" id="2_1ydh8"]
 [ext_resource type="AudioStream" uid="uid://c2m3fj1lhdxl7" path="res://assets/sound/ost/Tomb with the mummy.mp3" id="3_sv1no"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvej1"]
-size = Vector2(285, 663)
+size = Vector2(262.812, 459.335)
 
 [node name="Salle_Tombeau" type="Node2D"]
 script = ExtResource("1_dk5on")
@@ -16,20 +16,23 @@ position_smoothing_enabled = true
 
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("3_l0hlw")
+texture = ExtResource("2_1ydh8")
 
 [node name="Area2D" type="Area2D" parent="Sprite_Mur"]
-position = Vector2(-960, -540)
+position = Vector2(242, -763)
+scale = Vector2(1.04985, 1.042)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite_Mur/Area2D"]
-position = Vector2(530.5, 667.5)
+[node name="CollisionShape2D_1" type="CollisionShape2D" parent="Sprite_Mur/Area2D"]
+position = Vector2(-1476.4, 650.671)
+rotation = -3.14159
+scale = Vector2(0.854102, -1.68857)
 shape = SubResource("RectangleShape2D_gvej1")
 
 [node name="Area2D2" type="Area2D" parent="Sprite_Mur"]
 position = Vector2(-960, -540)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite_Mur/Area2D2"]
-position = Vector2(1328, 691)
+position = Vector2(-160, 541)
 shape = SubResource("RectangleShape2D_gvej1")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
