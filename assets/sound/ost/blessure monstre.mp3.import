@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg2u866iqw35t"
+path="res://.godot/imported/blessure monstre.mp3-39a4b30c308b6d56d20f08e26eab7d92.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/ost/blessure monstre.mp3"
+dest_files=["res://.godot/imported/blessure monstre.mp3-39a4b30c308b6d56d20f08e26eab7d92.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

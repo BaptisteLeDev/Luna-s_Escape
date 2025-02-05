@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://g7hmeyw6sabx"]
 
-[ext_resource type="Texture2D" uid="uid://ixhmigr0okm4" path="res://assets/test.jpg" id="3_db6gw"]
+[ext_resource type="Texture2D" uid="uid://ddmoabe5tko8d" path="res://assets/images/Pièce tombeau 2.svg" id="3_db6gw"]
 
 [node name="Salle_Eau" type="Node2D"]
 
@@ -10,5 +10,4 @@ position_smoothing_enabled = true
 
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("3_db6gw")

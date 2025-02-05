@@ -1,14 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7w1p4h4y6567"]
+[gd_scene load_steps=6 format=3 uid="uid://c7w1p4h4y6567"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_xv3na"]
 [ext_resource type="Texture2D" uid="uid://rqmke1xi2h44" path="res://assets/images/fond menu.png" id="2_eahg6"]
 [ext_resource type="AudioStream" uid="uid://7t83er30su3a" path="res://assets/sound/ost/music egyptienne.mp3" id="2_rfaue"]
 [ext_resource type="Texture2D" uid="uid://c4whqalpqcwbu" path="res://assets/images/bouton commencer.png" id="3_tjd1h"]
 [ext_resource type="Texture2D" uid="uid://d1bbji6o2a360" path="res://assets/images/bouton quitter 6.png" id="4_ldnli"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_i0yby"]
-font_size = 64
-outline_size = 5
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -28,29 +24,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_eahg6")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -58.0
-offset_top = 157.0
-offset_right = 59.0
-offset_bottom = 180.0
-grow_horizontal = 2
-text = "MENU PRINCIPAL"
-label_settings = SubResource("LabelSettings_i0yby")
-horizontal_alignment = 1
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -152.0
-offset_top = 335.0
+offset_top = 376.0
 offset_right = 153.0
-offset_bottom = 575.0
+offset_bottom = 616.0
 grow_horizontal = 2
 theme_override_constants/separation = 50
 

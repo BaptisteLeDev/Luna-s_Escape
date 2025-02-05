@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmxni7s4bb0ap"]
+[gd_scene load_steps=4 format=3 uid="uid://bmxni7s4bb0ap"]
 
-[ext_resource type="Texture2D" uid="uid://dmmm3nt0jv5ho" path="res://assets/images/scène de fin 2.0.svg" id="1_rrvgx"]
+[ext_resource type="Texture2D" uid="uid://b81q4tin1rr0v" path="res://assets/images/Scène eau-8.png" id="1_ijvbn"]
 [ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
+[ext_resource type="Texture2D" uid="uid://dpfrdy2m01s0s" path="res://assets/images/corde.svg" id="3_lvy8x"]
 
 [node name="Salle_Sortie" type="Node2D"]
 
@@ -10,11 +11,26 @@ position = Vector2(960, 540)
 position_smoothing_enabled = true
 
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(960, 598)
 scale = Vector2(1.37302, 1.37302)
-texture = ExtResource("1_rrvgx")
+texture = ExtResource("1_ijvbn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8ln0m")
 volume_db = -15.0
 autoplay = true
+
+[node name="Corde" type="Sprite2D" parent="."]
+position = Vector2(1044, 67)
+scale = Vector2(0.391792, 0.391792)
+texture = ExtResource("3_lvy8x")
+
+[node name="Corde2" type="Sprite2D" parent="."]
+position = Vector2(942, 64)
+scale = Vector2(0.391792, 0.391792)
+texture = ExtResource("3_lvy8x")
+
+[node name="Corde3" type="Sprite2D" parent="."]
+position = Vector2(846, 59)
+scale = Vector2(0.391792, 0.391792)
+texture = ExtResource("3_lvy8x")
