@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmy7yhtrjctd8"
+path="res://.godot/imported/_Snake Room.mp3-9452b2368e51f16e41fcb12e0dadab90.mp3str"
+
+[deps]
+
+source_file="res://assets/_Snake Room.mp3"
+dest_files=["res://.godot/imported/_Snake Room.mp3-9452b2368e51f16e41fcb12e0dadab90.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

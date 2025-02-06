@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpfrdy2m01s0s"
-path="res://.godot/imported/corde.svg-02661cb4e1bf042c69cf3a23a943861a.ctex"
+uid="uid://m3y83gckhh3f"
+path="res://.godot/imported/Vector.png-663b368530aa557d5214ddfb6ba8e3ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/corde.svg"
-dest_files=["res://.godot/imported/corde.svg-02661cb4e1bf042c69cf3a23a943861a.ctex"]
+source_file="res://assets/images/Salle_3/Vector.png"
+dest_files=["res://.godot/imported/Vector.png-663b368530aa557d5214ddfb6ba8e3ed.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

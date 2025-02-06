@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://py4xujiob135"
-path="res://.godot/imported/fond menu niveau 3.png-6bda8a65436064a3cd8742c3bc23ba5c.ctex"
+uid="uid://vr3sk3xq5x1f"
+path="res://.godot/imported/Vector-3.png-99e7b35ecb9290acbe0281f7623f4fb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/fond menu niveau 3.png"
-dest_files=["res://.godot/imported/fond menu niveau 3.png-6bda8a65436064a3cd8742c3bc23ba5c.ctex"]
+source_file="res://assets/images/Salle_3/Vector-3.png"
+dest_files=["res://.godot/imported/Vector-3.png-99e7b35ecb9290acbe0281f7623f4fb8.ctex"]
 
 [params]
 

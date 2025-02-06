@@ -12,7 +12,7 @@ func _ready() -> void:
 	$"PerduSethi1ErVousARattrapé!".visible = false
 	$Next_btn.visible = false
 	$Restart_btn.visible = false
-
+	$Mommie.visible = false
 	if not timer:
 		print("Erreur : Le nœud Timer n'a pas été trouvé !")
 		return
@@ -36,12 +36,14 @@ func _on_timer_timeout():
 	$ColorRect.visible = true
 	$"PerduSethi1ErVousARattrapé!".visible = true
 	$Restart_btn.visible = true
+	$Mommie.visible = true
 
 func _on_next_btn_button_down() -> void:
 	print("Prochain niveau")
 	$AudioStreamPlayer.play()
 	$ColorRect.visible = false
 	$"PerduSethi1ErVousARattrapé!".visible = false
+	$Next_btn.visible = false
 	emit_signal("NextLv")
 
 func _on_restart_btn_button_down() -> void:
@@ -51,6 +53,8 @@ func _on_restart_btn_button_down() -> void:
 	$ColorRect.visible = false
 	$"PerduSethi1ErVousARattrapé!".visible = false
 	$Restart_btn.visible = false
+	$Mommie.visible = false
+	$Next_btn.visible = false
 	update_timer_label(remaining_time)
 
 func update_timer_label(time_left: float) -> void:

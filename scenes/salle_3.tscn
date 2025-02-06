@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://g7hmeyw6sabx"]
+[gd_scene load_steps=9 format=3 uid="uid://g7hmeyw6sabx"]
 
-[ext_resource type="Texture2D" uid="uid://r44m6o7kfpq8" path="res://assets/images/fond niveau 3 sans les element placé.png" id="1_8onbb"]
+[ext_resource type="Texture2D" uid="uid://r44m6o7kfpq8" path="res://assets/images/Salle_3/fond niveau 3 sans les element placé.png" id="1_8onbb"]
+[ext_resource type="Texture2D" uid="uid://dcmkplpjydbr4" path="res://assets/images/Salle_3/Plan de travail 1Serpent.svg" id="2_1fax2"]
+[ext_resource type="Texture2D" uid="uid://bp6rywtuo4n4x" path="res://assets/images/Salle_3/Plan de travail 2Serpent.svg" id="3_vo4sp"]
+[ext_resource type="Texture2D" uid="uid://4toy1qcj5ppd" path="res://assets/images/Salle_3/Plan de travail 3Serpent.svg" id="4_50e8q"]
+[ext_resource type="Texture2D" uid="uid://dnhwrcvxps3q2" path="res://assets/images/Salle_3/Plan de travail 4Serpent.svg" id="5_v7ukh"]
+[ext_resource type="Texture2D" uid="uid://bwipvuq6xp3l2" path="res://assets/images/Salle_3/Plan de travail 5payrus.svg" id="6_3hgf6"]
+[ext_resource type="Texture2D" uid="uid://dlqtxaja0q3t3" path="res://assets/images/Salle_3/Plan de travail 6Serpent.svg" id="7_usmso"]
+[ext_resource type="AudioStream" uid="uid://bmy7yhtrjctd8" path="res://assets/_Snake Room.mp3" id="8_vyyia"]
 
 [node name="Salle_Sortie" type="Node2D"]
 
@@ -12,3 +19,40 @@ position_smoothing_enabled = true
 position = Vector2(960, 482)
 scale = Vector2(1.29328, 1.29328)
 texture = ExtResource("1_8onbb")
+
+[node name="PlanDeTravail1Serpent" type="Sprite2D" parent="."]
+position = Vector2(557, 312)
+scale = Vector2(0.65736, 0.65736)
+texture = ExtResource("2_1fax2")
+
+[node name="PlanDeTravail2Serpent" type="Sprite2D" parent="."]
+position = Vector2(1824, 149.25)
+scale = Vector2(1, 0.811203)
+texture = ExtResource("3_vo4sp")
+
+[node name="PlanDeTravail3Serpent" type="Sprite2D" parent="."]
+position = Vector2(1312, 296)
+scale = Vector2(0.451807, 0.451807)
+texture = ExtResource("4_50e8q")
+flip_h = true
+
+[node name="PlanDeTravail4Serpent" type="Sprite2D" parent="."]
+position = Vector2(72.6295, 938.5)
+scale = Vector2(0.704819, 0.704819)
+texture = ExtResource("5_v7ukh")
+
+[node name="PlanDeTravail5Payrus" type="Sprite2D" parent="."]
+position = Vector2(682, 793)
+scale = Vector2(0.1784, 0.1784)
+texture = ExtResource("6_3hgf6")
+
+[node name="PlanDeTravail6Serpent" type="Sprite2D" parent="."]
+position = Vector2(197, 228)
+scale = Vector2(0.576433, 0.576433)
+texture = ExtResource("7_usmso")
+flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_vyyia")
+autoplay = true
+bus = &"Ost"

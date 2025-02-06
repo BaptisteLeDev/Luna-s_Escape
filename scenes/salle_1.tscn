@@ -50,5 +50,6 @@ texture = ExtResource("6_e4oa0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_57txq")
+bus = &"Ost"
 
 [connection signal="tombeauClose" from="TombeauOuvert" to="." method="_on_tombeau_ouvert_tombeau_close"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv3b5bnskucjb"]
+[gd_scene load_steps=8 format=3 uid="uid://dv3b5bnskucjb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_8hwn1"]
 [ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="2_863ec"]
-[ext_resource type="Texture2D" uid="uid://bswvk0cifm83g" path="res://assets/images/Perdu Sethi 1er vous a rattrapé !.svg" id="3_4gvl6"]
 [ext_resource type="AudioStream" uid="uid://p5yfhn8hudbv" path="res://assets/sound/sfx/pierre qui glisse pourr porte.mp3" id="3_ahkvs"]
+[ext_resource type="Texture2D" uid="uid://c6sua06fpi11g" path="res://assets/images/Perdu Sethi 1er vous a rattrapé ! (1).svg" id="3_joilo"]
 [ext_resource type="Texture2D" uid="uid://c4whqalpqcwbu" path="res://assets/images/button/bouton commencer.png" id="5_8rlav"]
+[ext_resource type="Texture2D" uid="uid://g7tnduamdq0w" path="res://assets/images/Mommie.svg" id="6_7y4i5"]
+[ext_resource type="FontFile" uid="uid://crvmadd7v282b" path="res://assets/CaesarDressing-Regular.ttf" id="7_i6e6d"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -30,22 +32,23 @@ offset_bottom = 1172.0
 color = Color(0.697792, 0.127181, 0.185679, 0.439216)
 
 [node name="PerduSethi1ErVousARattrapé!" type="Sprite2D" parent="."]
-position = Vector2(944, 579)
+position = Vector2(944, 477)
 scale = Vector2(2.09459, 2.09459)
-texture = ExtResource("3_4gvl6")
+texture = ExtResource("3_joilo")
 
 [node name="Next_btn" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -184.0
-offset_top = 1026.0
-offset_right = 184.0
-offset_bottom = 1026.0
+offset_left = -82.0
+offset_top = -177.0
+offset_right = 286.0
+offset_bottom = 191.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 rotation = -1.5708
 scale = Vector2(0.456065, 0.456065)
 action_mode = 0
@@ -56,13 +59,24 @@ clip_text = true
 icon_alignment = 1
 
 [node name="Restart_btn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 866.0
-offset_top = 740.0
-offset_right = 1171.0
-offset_bottom = 842.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.5
+offset_top = -453.0
+offset_right = 152.5
+offset_bottom = -351.0
+grow_horizontal = 2
+grow_vertical = 0
 icon = ExtResource("5_8rlav")
 flat = true
+
+[node name="Mommie" type="Sprite2D" parent="."]
+position = Vector2(576, 1076)
+texture = ExtResource("6_7y4i5")
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -76,6 +90,7 @@ offset_right = 20.0
 offset_bottom = 116.0
 grow_horizontal = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("7_i6e6d")
 horizontal_alignment = 1
 vertical_alignment = 1
 

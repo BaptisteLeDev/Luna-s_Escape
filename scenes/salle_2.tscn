@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scenes/salle_2.gd" id="1_wvdqc"]
 [ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
 [ext_resource type="Texture2D" uid="uid://drbinhiai4j41" path="res://assets/images/Salle_2/Salle eau noçuveau décor-8.png" id="2_rt3jq"]
-[ext_resource type="Texture2D" uid="uid://dpfrdy2m01s0s" path="res://assets/images/corde.svg" id="3_lvy8x"]
-[ext_resource type="Texture2D" uid="uid://31ikdqlvguo5" path="res://corde.png" id="4_1mnqy"]
+[ext_resource type="Texture2D" uid="uid://dpfrdy2m01s0s" path="res://assets/images/Salle_2/corde.svg" id="3_lvy8x"]
+[ext_resource type="Texture2D" uid="uid://31ikdqlvguo5" path="res://assets/images/Salle_2/corde.png" id="4_1mnqy"]
 [ext_resource type="Script" path="res://scenes/corde.gd" id="5_33r5j"]
 [ext_resource type="Script" path="res://scenes/corde_2.gd" id="7_h0iir"]
 [ext_resource type="Script" path="res://scenes/corde_3.gd" id="8_710aq"]
@@ -23,8 +23,8 @@ texture = ExtResource("2_rt3jq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8ln0m")
-volume_db = -15.0
 autoplay = true
+bus = &"Ost"
 
 [node name="Corde" type="Sprite2D" parent="."]
 position = Vector2(1046, 227)

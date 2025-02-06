@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwipvuq6xp3l2"
-path="res://.godot/imported/Plan de travail 5payrus.svg-dad0af28d340467e943f9019dd62587f.ctex"
+uid="uid://dote1im0qtmac"
+path="res://.godot/imported/Vector-4.png-437a137541e609d0929d2c50972c7dc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Plan de travail 5payrus.svg"
-dest_files=["res://.godot/imported/Plan de travail 5payrus.svg-dad0af28d340467e943f9019dd62587f.ctex"]
+source_file="res://assets/images/Salle_3/Vector-4.png"
+dest_files=["res://.godot/imported/Vector-4.png-437a137541e609d0929d2c50972c7dc2.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

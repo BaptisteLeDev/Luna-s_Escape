@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31ikdqlvguo5"
-path="res://.godot/imported/corde.png-38d81ac6048d62a1c0d152b5000ed767.ctex"
+uid="uid://q140iv781ccn"
+path="res://.godot/imported/Vector-2.png-062da3925adba067834ccef0f0395ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://corde.png"
-dest_files=["res://.godot/imported/corde.png-38d81ac6048d62a1c0d152b5000ed767.ctex"]
+source_file="res://assets/images/Salle_3/Vector-2.png"
+dest_files=["res://.godot/imported/Vector-2.png-062da3925adba067834ccef0f0395ff3.ctex"]
 
 [params]
 

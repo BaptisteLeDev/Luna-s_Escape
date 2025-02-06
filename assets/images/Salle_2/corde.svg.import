@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnhwrcvxps3q2"
-path="res://.godot/imported/Plan de travail 4Serpent.svg-258763bd3d8fa6d19df9f5f6df0e99af.ctex"
+uid="uid://dpfrdy2m01s0s"
+path="res://.godot/imported/corde.svg-51ab7c67f16de2a5e0f3ec00e475aa00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Plan de travail 4Serpent.svg"
-dest_files=["res://.godot/imported/Plan de travail 4Serpent.svg-258763bd3d8fa6d19df9f5f6df0e99af.ctex"]
+source_file="res://assets/images/Salle_2/corde.svg"
+dest_files=["res://.godot/imported/corde.svg-51ab7c67f16de2a5e0f3ec00e475aa00.ctex"]
 
 [params]
 
