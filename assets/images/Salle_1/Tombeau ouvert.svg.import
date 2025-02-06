@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbqa4kim4swne"
-path="res://.godot/imported/Tombeau ouvert.svg-9669d0463d54109f78f1f74c0a92d8e0.ctex"
+path="res://.godot/imported/Tombeau ouvert.svg-a69f1940c29f8818018734c4435e4e87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Tombeau ouvert.svg"
-dest_files=["res://.godot/imported/Tombeau ouvert.svg-9669d0463d54109f78f1f74c0a92d8e0.ctex"]
+source_file="res://assets/images/Salle_1/Tombeau ouvert.svg"
+dest_files=["res://.godot/imported/Tombeau ouvert.svg-a69f1940c29f8818018734c4435e4e87.ctex"]
 
 [params]
 

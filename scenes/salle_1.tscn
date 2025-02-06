@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://6c06lye5mb2p"]
 
 [ext_resource type="Script" path="res://scenes/salle_1.gd" id="1_dk5on"]
-[ext_resource type="Texture2D" uid="uid://ddmoabe5tko8d" path="res://assets/images/Pièce tombeau 2.svg" id="2_m5aru"]
+[ext_resource type="Texture2D" uid="uid://ddmoabe5tko8d" path="res://assets/images/Salle_1/Pièce tombeau 2.svg" id="2_m5aru"]
 [ext_resource type="AudioStream" uid="uid://c2m3fj1lhdxl7" path="res://assets/sound/ost/Tomb with the mummy.mp3" id="3_sv1no"]
-[ext_resource type="Texture2D" uid="uid://dxmuajlyvhr4o" path="res://assets/images/Torche.svg" id="4_pdjdr"]
-[ext_resource type="Texture2D" uid="uid://bbqa4kim4swne" path="res://assets/images/Tombeau ouvert.svg" id="5_e8tdr"]
-[ext_resource type="Texture2D" uid="uid://cojavrbo8vc4s" path="res://assets/images/Tombeau fermé.svg" id="6_e4oa0"]
+[ext_resource type="Texture2D" uid="uid://dxmuajlyvhr4o" path="res://assets/images/Salle_1/Torche.svg" id="4_pdjdr"]
+[ext_resource type="Texture2D" uid="uid://bbqa4kim4swne" path="res://assets/images/Salle_1/Tombeau ouvert.svg" id="5_e8tdr"]
+[ext_resource type="Texture2D" uid="uid://cojavrbo8vc4s" path="res://assets/images/Salle_1/Tombeau fermé.svg" id="6_e4oa0"]
 [ext_resource type="Script" path="res://scenes/tombeau_ouvert.gd" id="7_qd6qk"]
-[ext_resource type="Texture2D" uid="uid://be0e8n3po1ahf" path="res://assets/images/Jarre.svg" id="7_tf0hd"]
+[ext_resource type="Texture2D" uid="uid://be0e8n3po1ahf" path="res://assets/images/Salle_1/Jarre.svg" id="7_tf0hd"]
 [ext_resource type="AudioStream" uid="uid://hs5iudhylg2r" path="res://assets/sound/sfx/momie .mp3" id="9_57txq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvej1"]

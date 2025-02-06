@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddmoabe5tko8d"
-path="res://.godot/imported/Pièce tombeau 2.svg-3fe4aea42f371f3a95354adcf80f02a6.ctex"
+path="res://.godot/imported/Pièce tombeau 2.svg-bddc64084fe9c9c916ddec98d8392947.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Pièce tombeau 2.svg"
-dest_files=["res://.godot/imported/Pièce tombeau 2.svg-3fe4aea42f371f3a95354adcf80f02a6.ctex"]
+source_file="res://assets/images/Salle_1/Pièce tombeau 2.svg"
+dest_files=["res://.godot/imported/Pièce tombeau 2.svg-bddc64084fe9c9c916ddec98d8392947.ctex"]
 
 [params]
 

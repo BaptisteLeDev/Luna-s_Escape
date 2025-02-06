@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b81q4tin1rr0v"
-path="res://.godot/imported/Scène eau-8.png-c14d4aba84c9c9ec3d4adaafc8d8708b.ctex"
+path="res://.godot/imported/Scène eau-8.png-c63afda461723bf5851e5f5bcec97490.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Scène eau-8.png"
-dest_files=["res://.godot/imported/Scène eau-8.png-c14d4aba84c9c9ec3d4adaafc8d8708b.ctex"]
+source_file="res://assets/images/Salle_2/Scène eau-8.png"
+dest_files=["res://.godot/imported/Scène eau-8.png-c63afda461723bf5851e5f5bcec97490.ctex"]
 
 [params]
 
