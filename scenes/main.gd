@@ -1,6 +1,6 @@
 extends Node
 
-@export var node: Node  # Nœud parent pour ajouter les scènes/niveaux
+@export var node: Node  # Nœud parent pour ajouter les scènes/niveaux (ex. "Game")
 @export var levels: Array[PackedScene]  # Liste des niveaux (PackedScene)
 var index = 0  # Index pour suivre le niveau actuel
 var current_level
@@ -31,11 +31,18 @@ func change_level() -> void:
 func reload_menu() -> void:
 	if current_level:
 		current_level.queue_free()  # Supprime le dernier niveau (au cas où)
-	# Instancie et ajoute le menu au parent
+
+	# Instancie et ajoute le menu directement dans le nœud principal (Main)
 	var menu = menu_scene.instantiate()
-	node.add_child(menu)
+	var main_node = get_tree().get_root().get_node("Main")  # Change "Main" si le nœud a un autre nom
+	
+	if main_node:
+		main_node.add_child(menu)  # Ajouter le menu au nœud principal
+		print("Menu ajouté directement dans le nœud principal.")
+	else:
+		print("Erreur : Impossible de trouver le nœud 'Main'.")
+	
 	index = 0  # Réinitialise l'index des niveaux
-	print("Retour au menu.")
 
 # Fonction pour retourner au menu depuis n'importe où
 func return_to_menu() -> void:
@@ -43,10 +50,5 @@ func return_to_menu() -> void:
 	for child in node.get_children():
 		child.queue_free()
 
-	# Charger la scène Menu
-	var menu = menu_scene.instantiate()
-
-	# Ajouter la scène Menu directement sous "Main"
-	var main = get_tree().root.get_node("Main")  # Nom exact de ton nœud principal
-	main.add_child(menu)
-	print("Menu ajouté au bon endroit !")
+	# Charger la scène Menu directement dans "Main"
+	reload_menu()
