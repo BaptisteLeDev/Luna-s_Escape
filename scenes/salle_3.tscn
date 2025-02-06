@@ -1,13 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://g7hmeyw6sabx"]
 
-[ext_resource type="Texture2D" uid="uid://ddmoabe5tko8d" path="res://assets/images/Salle_1/Pièce tombeau 2.svg" id="3_db6gw"]
+[ext_resource type="Texture2D" uid="uid://r44m6o7kfpq8" path="res://assets/images/fond niveau 3 sans les element placé.png" id="1_8onbb"]
 
-[node name="Salle_Eau" type="Node2D"]
+[node name="Salle_Sortie" type="Node2D"]
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 position_smoothing_enabled = true
 
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("3_db6gw")
+position = Vector2(960, 482)
+scale = Vector2(1.29328, 1.29328)
+texture = ExtResource("1_8onbb")

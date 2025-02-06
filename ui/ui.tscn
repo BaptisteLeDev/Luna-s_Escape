@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv3b5bnskucjb"]
+[gd_scene load_steps=6 format=3 uid="uid://dv3b5bnskucjb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_8hwn1"]
 [ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="2_863ec"]
 [ext_resource type="Texture2D" uid="uid://bswvk0cifm83g" path="res://assets/images/Perdu Sethi 1er vous a rattrapé !.svg" id="3_4gvl6"]
 [ext_resource type="AudioStream" uid="uid://p5yfhn8hudbv" path="res://assets/sound/sfx/pierre qui glisse pourr porte.mp3" id="3_ahkvs"]
+[ext_resource type="Texture2D" uid="uid://c4whqalpqcwbu" path="res://assets/images/button/bouton commencer.png" id="5_8rlav"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -56,10 +57,12 @@ icon_alignment = 1
 
 [node name="Restart_btn" type="Button" parent="."]
 layout_mode = 0
-offset_left = 776.0
-offset_top = 1026.0
-offset_right = 784.0
-offset_bottom = 1034.0
+offset_left = 866.0
+offset_top = 740.0
+offset_right = 1171.0
+offset_bottom = 842.0
+icon = ExtResource("5_8rlav")
+flat = true
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -68,10 +71,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -20.0
-offset_top = 45.0
+offset_top = 93.0
 offset_right = 20.0
-offset_bottom = 68.0
+offset_bottom = 116.0
 grow_horizontal = 2
+size_flags_horizontal = 4
 horizontal_alignment = 1
 vertical_alignment = 1
 

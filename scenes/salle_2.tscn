@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
 [ext_resource type="Texture2D" uid="uid://dpfrdy2m01s0s" path="res://assets/images/corde.svg" id="3_lvy8x"]
 
-[node name="Salle_Sortie" type="Node2D"]
+[node name="Salle_Eau" type="Node2D"]
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
 position = Vector2(960, 540)

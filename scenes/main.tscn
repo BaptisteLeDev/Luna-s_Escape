@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctgyairieba60"]
+[gd_scene load_steps=10 format=3 uid="uid://ctgyairieba60"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_8glny"]
 [ext_resource type="PackedScene" uid="uid://8h0lne83ilj" path="res://scenes/game.tscn" id="1_uymy7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddtkafx6cpqey" path="res://scenes/fin.tscn" id="5_0q2vl"]
 [ext_resource type="PackedScene" uid="uid://dv3b5bnskucjb" path="res://ui/ui.tscn" id="5_3xfvs"]
 [ext_resource type="PackedScene" uid="uid://c7w1p4h4y6567" path="res://scenes/menu.tscn" id="8_475ui"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="8_psudh"]
 
 [node name="Main" type="Node" node_paths=PackedStringArray("node")]
 script = ExtResource("1_8glny")
@@ -16,13 +17,15 @@ levels = Array[PackedScene]([ExtResource("2_rwcrh"), ExtResource("3_jarpu"), Ext
 menu_scene = ExtResource("8_475ui")
 
 [node name="Game" parent="." instance=ExtResource("1_uymy7")]
-
-[node name="Salle_Tombeau" parent="Game" instance=ExtResource("2_rwcrh")]
+script = ExtResource("8_psudh")
 
 [node name="Ui" parent="." instance=ExtResource("5_3xfvs")]
+offset_left = 2.0
+offset_right = 2.0
 
 [node name="Menu" parent="." node_paths=PackedStringArray("node") instance=ExtResource("8_475ui")]
 node = NodePath("../Game")
 
+[connection signal="nextUi" from="." to="Ui" method="_on_main_next_ui"]
 [connection signal="NextLv" from="Ui" to="." method="_on_ui_next_lv"]
 [connection signal="startGame" from="Menu" to="." method="_on_menu_start_game"]
