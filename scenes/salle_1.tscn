@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6c06lye5mb2p"]
+[gd_scene load_steps=14 format=3 uid="uid://6c06lye5mb2p"]
 
 [ext_resource type="Script" path="res://scripts/salle_1.gd" id="1_dk5on"]
 [ext_resource type="Texture2D" uid="uid://ddmoabe5tko8d" path="res://assets/images/Salle_1/Pièce tombeau 2.svg" id="2_m5aru"]
@@ -9,6 +9,108 @@
 [ext_resource type="Script" path="res://scripts/tombeau_ouvert.gd" id="7_qd6qk"]
 [ext_resource type="Texture2D" uid="uid://be0e8n3po1ahf" path="res://assets/images/Salle_1/Jarre.svg" id="7_tf0hd"]
 [ext_resource type="AudioStream" uid="uid://hs5iudhylg2r" path="res://assets/sound/sfx/momie .mp3" id="9_57txq"]
+[ext_resource type="Texture2D" uid="uid://c1q52fuqoimvj" path="res://assets/images/texte 0.png" id="10_ibg07"]
+
+[sub_resource type="Animation" id="Animation_35hfr"]
+resource_name = "fade_out"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 3)
+}
+
+[sub_resource type="Animation" id="Animation_wq4ak"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i8fqu"]
+_data = {
+"RESET": SubResource("Animation_wq4ak"),
+"fade_out": SubResource("Animation_35hfr")
+}
 
 [node name="Salle_Tombeau" type="Node2D"]
 scale = Vector2(0.697066, 0.697066)
@@ -55,5 +157,21 @@ volume_db = 5.0
 autoplay = true
 max_polyphony = 3
 bus = &"Sfx"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 559.488
+offset_top = 885.139
+offset_right = 1436.49
+offset_bottom = 967.139
+grow_horizontal = 2
+texture = ExtResource("10_ibg07")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_i8fqu")
+}
 
 [connection signal="tombeauClose" from="TombeauOuvert" to="." method="_on_tombeau_ouvert_tombeau_close"]

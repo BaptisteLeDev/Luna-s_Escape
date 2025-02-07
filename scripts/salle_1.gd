@@ -6,6 +6,8 @@ signal SalleFinished  # Signal émis lorsque la salle est terminée
 
 func _ready():
 	$"TombeauFermé".visible = false  # Initialise l'état du coffre
+	var anim_player = $TextureRect/AnimationPlayer
+	anim_player.play("fade_out")
 
 func update_coffre_state():
 	# Met à jour l'état du coffre (ouvert/fermé)
