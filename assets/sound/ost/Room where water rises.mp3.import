@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Room where water rises.mp3-b3dd2f22cdc1e9b0ed
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

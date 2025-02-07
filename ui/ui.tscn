@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv3b5bnskucjb"]
+[gd_scene load_steps=9 format=3 uid="uid://dv3b5bnskucjb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_8hwn1"]
 [ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="2_863ec"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c4whqalpqcwbu" path="res://assets/images/button/bouton commencer.png" id="5_8rlav"]
 [ext_resource type="Texture2D" uid="uid://g7tnduamdq0w" path="res://assets/images/Mommie.svg" id="6_7y4i5"]
 [ext_resource type="FontFile" uid="uid://crvmadd7v282b" path="res://assets/CaesarDressing-Regular.ttf" id="7_i6e6d"]
+[ext_resource type="Texture2D" uid="uid://di0f6b8t0j0rc" path="res://assets/images/bouton sablier.png" id="8_e3fe8"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -84,15 +85,23 @@ texture = ExtResource("6_7y4i5")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
+offset_left = -750.0
 offset_top = 93.0
-offset_right = 20.0
-offset_bottom = 116.0
+offset_right = -648.0
+offset_bottom = 155.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("7_i6e6d")
+theme_override_font_sizes/font_size = 50
+text = "22:22"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BoutonSablier" type="Sprite2D" parent="Timer"]
+modulate = Color(0.982343, 0.982342, 0.982342, 1)
+position = Vector2(211.894, 93.2391)
+scale = Vector2(0.48878, 0.48878)
+texture = ExtResource("8_e3fe8")
 
 [connection signal="button_down" from="Next_btn" to="." method="_on_next_btn_button_down"]
 [connection signal="button_down" from="Restart_btn" to="." method="_on_restart_btn_button_down"]

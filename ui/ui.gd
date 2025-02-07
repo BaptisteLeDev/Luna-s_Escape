@@ -61,7 +61,7 @@ func update_timer_label(time_left: float) -> void:
 	# Met à jour le label avec le temps formaté
 	var minutes = int(time_left) / 60
 	var seconds = int(time_left) % 60
-	timer_label.text = "Temps restant : %02d:%02d" % [minutes, seconds]
+	timer_label.text = "%02d:%02d" % [minutes, seconds]
 
 
 func _on_main_next_ui() -> void:

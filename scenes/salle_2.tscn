@@ -24,6 +24,7 @@ texture = ExtResource("2_rt3jq")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8ln0m")
 autoplay = true
+max_polyphony = 5
 bus = &"Ost"
 
 [node name="Corde" type="Sprite2D" parent="."]
