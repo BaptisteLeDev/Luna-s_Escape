@@ -1,6 +1,6 @@
 extends Node
 
-@onready var transition = $Transition  # Remplace "$Transition" par le chemin vers ton CanvasLayer
+@onready var transition = $CanvasLayer
 @export var node: Node  # Nœud parent pour ajouter les scènes/niveaux (ex. "Game")
 @export var levels: Array[PackedScene]  # Liste des niveaux (PackedScene)
 @export var menu_scene: PackedScene  # Scène du menu à recharger
@@ -21,12 +21,16 @@ func _on_ui_next_lv() -> void:
 	change_level()  # Charger le niveau suivant
 
 func change_level() -> void:
+	print("Appel de change_level")
 	if current_level:
 		current_level.queue_free()  # Libère le niveau précédent
 	if index < levels.size():
+		print("Transition vers le niveau :", index)
 		transition.start_transition(Callable(self, "_load_next_level"))
 	else:
+		print("Tous les niveaux terminés, retour au menu.")
 		transition.start_transition(Callable(self, "reload_menu"))
+
 
 func _load_next_level():
 	current_level = levels[index].instantiate()
@@ -59,3 +63,7 @@ func return_to_menu() -> void:
 	for child in node.get_children():
 		child.queue_free()  # Supprime tous les enfants
 	reload_menu()
+
+
+func _on_canvas_layer_on_transition_finished() -> void:
+	pass # Replace with function body.
