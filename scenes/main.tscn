@@ -30,6 +30,7 @@ node = NodePath("../Game")
 [node name="CanvasLayer" parent="." instance=ExtResource("10_v5b5h")]
 
 [connection signal="nextUi" from="." to="Ui" method="_on_main_next_ui"]
+[connection signal="timeStart" from="." to="Ui" method="_on_main_time_start"]
 [connection signal="NextLv" from="Ui" to="." method="_on_ui_next_lv"]
 [connection signal="startGame" from="Menu" to="." method="_on_menu_start_game"]
 [connection signal="on_transition_finished" from="CanvasLayer" to="." method="_on_canvas_layer_on_transition_finished"]

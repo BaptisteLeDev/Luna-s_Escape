@@ -1,29 +1,30 @@
 extends Node
 
 @onready var transition = $CanvasLayer
-@export var node: Node  # Nœud parent pour ajouter les scènes/niveaux (ex. "Game")
-@export var levels: Array[PackedScene]  # Liste des niveaux (PackedScene)
-@export var menu_scene: PackedScene  # Scène du menu à recharger
-var index = 0  # Index pour suivre le niveau actuel
+@export var node: Node
+@export var levels: Array[PackedScene]
+@export var menu_scene: PackedScene
+var index = 0
 var current_level
-signal nextUi  # Signal pour indiquer que l'UI doit passer au niveau suivant
+signal nextUi
+signal timeStart
 
 func _ready() -> void:
 	pass
-# Fonction appelée depuis le menu pour commencer le jeu
-func _on_menu_start_game() -> void:
-	change_level()  # Charger le premier niveau
 
-# Fonction appelée pour passer au niveau suivant
+func _on_menu_start_game() -> void:
+	change_level()
+
 func _on_ui_next_lv() -> void:
 	if current_level:
-		current_level.queue_free()  # Supprime le niveau actuel
-	change_level()  # Charger le niveau suivant
+		current_level.queue_free()
+	change_level()
 
 func change_level() -> void:
 	print("Appel de change_level")
 	if current_level:
-		current_level.queue_free()  # Libère le niveau précédent
+		current_level.queue_free()
+
 	if index < levels.size():
 		print("Transition vers le niveau :", index)
 		transition.start_transition(Callable(self, "_load_next_level"))
@@ -31,20 +32,28 @@ func change_level() -> void:
 		print("Tous les niveaux terminés, retour au menu.")
 		transition.start_transition(Callable(self, "reload_menu"))
 
-
 func _load_next_level():
 	current_level = levels[index].instantiate()
 	node.add_child(current_level)
 	index += 1
-	print("Niveau actuel :", index)
+	manage_ui_visibility(current_level)
+	emit_signal("timeStart")
 	current_level.connect("SalleFinished", Callable(self, "_on_level_finished"))
-	transition.fade_back()  # Reviens après le fondu noir
+	transition.fade_back()
+		
 
+func manage_ui_visibility(level: Node) -> void:
+	if is_ui_scene(level):
+		$Ui.visible = false
+	else:
+		$Ui.visible = true
 
-# Méthode appelée lorsque le niveau est terminé
+func is_ui_scene(level: Node) -> bool:
+	return level.has_meta("scene_id") and level.get_meta("scene_id") == "Ui"
+
 func _on_level_finished() -> void:
 	print("Niveau terminé, signal envoyé à l'UI")
-	emit_signal("nextUi")  # Émet le signal pour l'UI
+	emit_signal("nextUi")
 
 func reload_menu() -> void:
 	transition.start_transition(Callable(self, "_load_menu_scene"))
@@ -52,18 +61,12 @@ func reload_menu() -> void:
 func _load_menu_scene():
 	if current_level:
 		current_level.queue_free()
-		var menu = menu_scene.instantiate()
-		node.add_child(menu)
-		index = 0
-		transition.fade_back()
+	var menu = menu_scene.instantiate()
+	node.add_child(menu)
+	index = 0
+	transition.fade_back()
 
-
-# Fonction pour retourner au menu depuis n'importe où
 func return_to_menu() -> void:
 	for child in node.get_children():
-		child.queue_free()  # Supprime tous les enfants
+		child.queue_free()
 	reload_menu()
-
-
-func _on_canvas_layer_on_transition_finished() -> void:
-	pass # Replace with function body.
