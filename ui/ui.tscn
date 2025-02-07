@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv3b5bnskucjb"]
+[gd_scene load_steps=10 format=3 uid="uid://dv3b5bnskucjb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_8hwn1"]
 [ext_resource type="Texture2D" uid="uid://r6eci7gqoodn" path="res://ui/flèche.png" id="2_863ec"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://g7tnduamdq0w" path="res://assets/images/Mommie.svg" id="6_7y4i5"]
 [ext_resource type="FontFile" uid="uid://crvmadd7v282b" path="res://assets/CaesarDressing-Regular.ttf" id="7_i6e6d"]
 [ext_resource type="Texture2D" uid="uid://di0f6b8t0j0rc" path="res://assets/images/bouton sablier.png" id="8_e3fe8"]
+[ext_resource type="AudioStream" uid="uid://cg2u866iqw35t" path="res://assets/sound/ost/blessure monstre.mp3" id="9_yh360"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -25,17 +26,31 @@ max_polyphony = 10
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(2000, 1200)
-layout_mode = 0
-offset_left = -32.0
-offset_top = -28.0
-offset_right = 1968.0
-offset_bottom = 1172.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -240.0
+offset_right = 360.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.697792, 0.127181, 0.185679, 0.439216)
 
-[node name="PerduSethi1ErVousARattrapé!" type="Sprite2D" parent="."]
-position = Vector2(944, 477)
-scale = Vector2(2.09459, 2.09459)
+[node name="txtOver" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.322656
+anchor_top = 0.304167
+anchor_right = 0.676562
+anchor_bottom = 0.4125
+offset_left = -212.0
+offset_right = 212.0
+offset_bottom = 73.0
+grow_horizontal = 2
 texture = ExtResource("3_joilo")
+metadata/_edit_use_anchors_ = true
 
 [node name="Next_btn" type="Button" parent="."]
 layout_mode = 1
@@ -44,14 +59,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -82.0
-offset_top = -177.0
-offset_right = 286.0
-offset_bottom = 191.0
+offset_left = -86.0
+offset_top = -25.0
+offset_right = 282.0
+offset_bottom = 343.0
 grow_horizontal = 2
 grow_vertical = 0
 rotation = -1.5708
-scale = Vector2(0.456065, 0.456065)
+scale = Vector2(0.46083, 0.456065)
 action_mode = 0
 icon = ExtResource("2_863ec")
 flat = true
@@ -67,41 +82,53 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -152.5
-offset_top = -453.0
+offset_top = -309.0
 offset_right = 152.5
-offset_bottom = -351.0
+offset_bottom = -207.0
 grow_horizontal = 2
 grow_vertical = 0
 icon = ExtResource("5_8rlav")
 flat = true
 
-[node name="Mommie" type="Sprite2D" parent="."]
-position = Vector2(576, 1076)
-texture = ExtResource("6_7y4i5")
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="TimerLabel" type="Label" parent="Timer"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -750.0
-offset_top = 93.0
-offset_right = -648.0
-offset_bottom = 155.0
-grow_horizontal = 2
+offset_left = 156.0
+offset_top = 76.0
+offset_right = 258.0
+offset_bottom = 138.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("7_i6e6d")
 theme_override_font_sizes/font_size = 50
 text = "22:22"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="BoutonSablier" type="Sprite2D" parent="Timer"]
-modulate = Color(0.982343, 0.982342, 0.982342, 1)
-position = Vector2(211.894, 93.2391)
-scale = Vector2(0.48878, 0.48878)
+[node name="TextureRect" type="TextureRect" parent="Timer"]
+offset_left = 26.0
+offset_top = 28.0
+offset_right = 758.0
+offset_bottom = 338.0
+scale = Vector2(0.376731, 0.376731)
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture = ExtResource("8_e3fe8")
+
+[node name="Momie" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 215.0
+offset_top = 312.0
+offset_right = 571.0
+offset_bottom = 1329.0
+grow_horizontal = 2
+texture = ExtResource("6_7y4i5")
+
+[node name="BlessureMonstre" type="AudioStreamPlayer" parent="Momie"]
+stream = ExtResource("9_yh360")
 
 [connection signal="button_down" from="Next_btn" to="." method="_on_next_btn_button_down"]
 [connection signal="button_down" from="Restart_btn" to="." method="_on_restart_btn_button_down"]

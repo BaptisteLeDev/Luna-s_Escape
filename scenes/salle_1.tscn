@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://hs5iudhylg2r" path="res://assets/sound/sfx/momie .mp3" id="9_57txq"]
 
 [node name="Salle_Tombeau" type="Node2D"]
+scale = Vector2(0.697066, 0.697066)
 script = ExtResource("1_dk5on")
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
@@ -51,6 +52,8 @@ texture = ExtResource("6_e4oa0")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_57txq")
 volume_db = 5.0
-bus = &"Ost"
+autoplay = true
+max_polyphony = 3
+bus = &"Sfx"
 
 [connection signal="tombeauClose" from="TombeauOuvert" to="." method="_on_tombeau_ouvert_tombeau_close"]

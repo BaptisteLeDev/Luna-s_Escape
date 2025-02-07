@@ -9,10 +9,10 @@ signal NextLv  # Signal pour passer au niveau suivant
 
 func _ready() -> void:
 	$ColorRect.visible = false
-	$"PerduSethi1ErVousARattrapé!".visible = false
+	$txtOver.visible = false
 	$Next_btn.visible = false
 	$Restart_btn.visible = false
-	$Mommie.visible = false
+	$Momie.visible = false
 	if not timer:
 		print("Erreur : Le nœud Timer n'a pas été trouvé !")
 		return
@@ -32,7 +32,7 @@ func _process(delta):
 func _on_timer_timeout():
 	print("Temps écoulé !")
 	$ColorRect.visible = true
-	$"PerduSethi1ErVousARattrapé!".visible = true
+	$txtOver.visible = true
 	$Restart_btn.visible = true
 	$Mommie.visible = true
 
@@ -40,7 +40,7 @@ func _on_next_btn_button_down() -> void:
 	print("Prochain niveau")
 	$AudioStreamPlayer.play()
 	$ColorRect.visible = false
-	$"PerduSethi1ErVousARattrapé!".visible = false
+	$txtOver.visible = false
 	$Next_btn.visible = false
 	emit_signal("NextLv")
 
@@ -50,7 +50,7 @@ func _on_restart_btn_button_down() -> void:
 	remaining_time = 60.0
 	timer.start()
 	$ColorRect.visible = false
-	$"PerduSethi1ErVousARattrapé!".visible = false
+	$txtOver.visible = false
 	$Restart_btn.visible = false
 	$Mommie.visible = false
 	$Next_btn.visible = false

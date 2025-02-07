@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmxni7s4bb0ap"]
+[gd_scene load_steps=10 format=3 uid="uid://bmxni7s4bb0ap"]
 
 [ext_resource type="Script" path="res://scenes/salle_2.gd" id="1_wvdqc"]
 [ext_resource type="AudioStream" uid="uid://bj8lqjwlrnr6w" path="res://assets/sound/ost/Room where water rises.mp3" id="2_8ln0m"]
@@ -8,8 +8,10 @@
 [ext_resource type="Script" path="res://scenes/corde.gd" id="5_33r5j"]
 [ext_resource type="Script" path="res://scenes/corde_2.gd" id="7_h0iir"]
 [ext_resource type="Script" path="res://scenes/corde_3.gd" id="8_710aq"]
+[ext_resource type="AudioStream" uid="uid://b8c7ig8lxah21" path="res://assets/sound/ost/frappe porte.mp3" id="8_lwfhw"]
 
 [node name="Salle_Eau" type="Node2D"]
+scale = Vector2(0.656452, 0.656452)
 script = ExtResource("1_wvdqc")
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
@@ -20,12 +22,6 @@ position_smoothing_enabled = true
 position = Vector2(960, 598)
 scale = Vector2(1.37302, 1.37302)
 texture = ExtResource("2_rt3jq")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_8ln0m")
-autoplay = true
-max_polyphony = 5
-bus = &"Ost"
 
 [node name="Corde" type="Sprite2D" parent="."]
 position = Vector2(1046, 227)
@@ -44,6 +40,18 @@ position = Vector2(862, 247)
 scale = Vector2(0.391792, 0.391792)
 texture = ExtResource("3_lvy8x")
 script = ExtResource("8_710aq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lwfhw")
+volume_db = 5.0
+autoplay = true
+bus = &"Ost"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8ln0m")
+autoplay = true
+bus = &"Ost"
+parameters/looping = true
 
 [connection signal="corde" from="Corde" to="." method="_on_corde_corde"]
 [connection signal="corde3" from="Corde3" to="." method="_on_corde_3_corde_3"]

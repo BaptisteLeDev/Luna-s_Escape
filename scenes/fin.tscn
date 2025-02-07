@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddtkafx6cpqey"]
+[gd_scene load_steps=8 format=3 uid="uid://ddtkafx6cpqey"]
 
 [ext_resource type="Texture2D" uid="uid://bxrjb5d2rxu2i" path="res://assets/images/Fin/scène de fin 2.0.svg" id="1_cpyed"]
 [ext_resource type="Script" path="res://scenes/fin.gd" id="1_f2hft"]
 [ext_resource type="Texture2D" uid="uid://b2p0w13hsyq3f" path="res://assets/images/Fin/voiture.svg" id="2_gjp88"]
 [ext_resource type="Animation" uid="uid://cnr5qhgcumvqn" path="res://car end.res" id="4_i3r1y"]
+[ext_resource type="AudioStream" uid="uid://bmy7yhtrjctd8" path="res://assets/sound/ost/_Snake Room.mp3" id="5_jk3vq"]
 
 [sub_resource type="Animation" id="Animation_lyyyh"]
 length = 0.001
@@ -37,6 +38,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(0.669659, 0.6738)
 script = ExtResource("1_f2hft")
 
 [node name="ScèneDeFin2_0" type="Sprite2D" parent="."]
@@ -53,3 +55,9 @@ root_node = NodePath("../../ScèneDeFin2_0")
 libraries = {
 "": SubResource("AnimationLibrary_lay0g")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jk3vq")
+autoplay = true
+max_polyphony = 5
+bus = &"Ost"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://g7hmeyw6sabx"]
+[gd_scene load_steps=13 format=3 uid="uid://g7hmeyw6sabx"]
 
 [ext_resource type="Texture2D" uid="uid://r44m6o7kfpq8" path="res://assets/images/Salle_3/fond niveau 3 sans les element placé.png" id="1_8onbb"]
 [ext_resource type="Script" path="res://scenes/salle_3.gd" id="1_hotym"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dlqtxaja0q3t3" path="res://assets/images/Salle_3/Plan de travail 6Serpent.svg" id="7_usmso"]
 [ext_resource type="AudioStream" uid="uid://bmy7yhtrjctd8" path="res://assets/sound/ost/_Snake Room.mp3" id="8_vyyia"]
 [ext_resource type="Script" path="res://scenes/plan_de_travail_6_serpent.gd" id="10_ydqeb"]
+[ext_resource type="AudioStream" uid="uid://bm8mdrsaiqq6d" path="res://assets/sound/ost/frappe.mp3" id="12_nppky"]
 
 [node name="Salle_Sortie" type="Node2D"]
+scale = Vector2(0.671293, 0.671293)
 script = ExtResource("1_hotym")
 
 [node name="Camera_Joueur" type="Camera2D" parent="."]
@@ -62,6 +64,12 @@ script = ExtResource("10_ydqeb")
 stream = ExtResource("8_vyyia")
 autoplay = true
 max_polyphony = 5
+bus = &"Ost"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_nppky")
+volume_db = 5.0
+autoplay = true
 bus = &"Ost"
 
 [connection signal="RedSnak" from="PlanDeTravail2Serpent" to="." method="_on_plan_de_travail_2_serpent_red_snak"]
