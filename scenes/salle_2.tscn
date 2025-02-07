@@ -12,13 +12,9 @@
 [node name="Salle_Eau" type="Node2D"]
 script = ExtResource("1_wvdqc")
 
-[node name="Camera_Joueur" type="Camera2D" parent="."]
-position = Vector2(960, 540)
-position_smoothing_enabled = true
-
 [node name="Sprite_Mur" type="Sprite2D" parent="."]
 position = Vector2(960, 598)
-scale = Vector2(1.37302, 1.37302)
+scale = Vector2(1.34863, 1.34863)
 texture = ExtResource("2_rt3jq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -28,7 +24,7 @@ max_polyphony = 5
 bus = &"Ost"
 
 [node name="Corde" type="Sprite2D" parent="."]
-position = Vector2(1046, 227)
+position = Vector2(1081, 134)
 scale = Vector2(0.391792, 0.391792)
 texture = ExtResource("4_1mnqy")
 script = ExtResource("5_33r5j")
@@ -40,7 +36,7 @@ texture = ExtResource("3_lvy8x")
 script = ExtResource("7_h0iir")
 
 [node name="Corde3" type="Sprite2D" parent="."]
-position = Vector2(862, 247)
+position = Vector2(814, 242)
 scale = Vector2(0.391792, 0.391792)
 texture = ExtResource("3_lvy8x")
 script = ExtResource("8_710aq")
