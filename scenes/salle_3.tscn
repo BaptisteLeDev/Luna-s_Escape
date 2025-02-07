@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://g7hmeyw6sabx"]
 
 [ext_resource type="Texture2D" uid="uid://r44m6o7kfpq8" path="res://assets/images/Salle_3/fond niveau 3 sans les element placé.png" id="1_8onbb"]
-[ext_resource type="Script" path="res://scenes/salle_3.gd" id="1_hotym"]
+[ext_resource type="Script" path="res://scripts/salle_3.gd" id="1_hotym"]
 [ext_resource type="Texture2D" uid="uid://dcmkplpjydbr4" path="res://assets/images/Salle_3/Plan de travail 1Serpent.svg" id="2_1fax2"]
 [ext_resource type="Texture2D" uid="uid://bp6rywtuo4n4x" path="res://assets/images/Salle_3/Plan de travail 2Serpent.svg" id="3_vo4sp"]
 [ext_resource type="Texture2D" uid="uid://4toy1qcj5ppd" path="res://assets/images/Salle_3/Plan de travail 3Serpent.svg" id="4_50e8q"]
-[ext_resource type="Script" path="res://scenes/plan_de_travail_2_serpent.gd" id="5_nwbc3"]
+[ext_resource type="Script" path="res://scripts/plan_de_travail_2_serpent.gd" id="5_nwbc3"]
 [ext_resource type="Texture2D" uid="uid://dnhwrcvxps3q2" path="res://assets/images/Salle_3/Plan de travail 4Serpent.svg" id="5_v7ukh"]
 [ext_resource type="Texture2D" uid="uid://bwipvuq6xp3l2" path="res://assets/images/Salle_3/Plan de travail 5payrus.svg" id="6_3hgf6"]
 [ext_resource type="Texture2D" uid="uid://dlqtxaja0q3t3" path="res://assets/images/Salle_3/Plan de travail 6Serpent.svg" id="7_usmso"]
 [ext_resource type="AudioStream" uid="uid://bmy7yhtrjctd8" path="res://assets/sound/ost/_Snake Room.mp3" id="8_vyyia"]
-[ext_resource type="Script" path="res://scenes/plan_de_travail_6_serpent.gd" id="10_ydqeb"]
-[ext_resource type="AudioStream" uid="uid://bm8mdrsaiqq6d" path="res://assets/sound/ost/frappe.mp3" id="12_nppky"]
+[ext_resource type="Script" path="res://scripts/plan_de_travail_6_serpent.gd" id="10_ydqeb"]
+[ext_resource type="AudioStream" uid="uid://b8c7ig8lxah21" path="res://assets/sound/ost/frappe porte.mp3" id="12_1n05v"]
 
 [node name="Salle_Sortie" type="Node2D"]
 scale = Vector2(0.671293, 0.671293)
@@ -67,7 +67,7 @@ max_polyphony = 5
 bus = &"Ost"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_nppky")
+stream = ExtResource("12_1n05v")
 volume_db = 5.0
 autoplay = true
 bus = &"Ost"

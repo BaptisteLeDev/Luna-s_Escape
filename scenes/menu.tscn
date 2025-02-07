@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7w1p4h4y6567"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_xv3na"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_xv3na"]
 [ext_resource type="Texture2D" uid="uid://rqmke1xi2h44" path="res://assets/images/fond menu.png" id="2_eahg6"]
 [ext_resource type="AudioStream" uid="uid://7t83er30su3a" path="res://assets/sound/ost/music egyptienne.mp3" id="2_rfaue"]
 [ext_resource type="Texture2D" uid="uid://c4whqalpqcwbu" path="res://assets/images/button/bouton commencer.png" id="3_tjd1h"]
